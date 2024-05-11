@@ -9,13 +9,13 @@ resource "azurerm_container_group" "container" {
   resource_group_name = azurerm_resource_group.rg.name
   ip_address_type     = "Public"
   os_type             = "Linux"
-  restart_policy      = var.restart_policy
+  restart_policy      = "Always"
 
   container {
     name   = "ci-colours"
     image  = "ghcr.io/gdwr/colours"
-    cpu    = var.cpu_cores
-    memory = var.memory_in_gb
+    cpu    = "0.1"
+    memory = "0.2"
 
     ports {
       port     = 80
