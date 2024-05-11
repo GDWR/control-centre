@@ -24,7 +24,7 @@ resource "azurerm_container_group" "container" {
   }
 } 
 
-resource "cloudflare_record" "www" {
+resource "cloudflare_record" "record" {
   zone_id = var.cloudflare_zone_id
   name    = "gdwr.me"
   value   = azurerm_container_group.container.ip_address
