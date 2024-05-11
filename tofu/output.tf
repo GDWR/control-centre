@@ -14,3 +14,11 @@ output "colours_domains" {
   value = module.colours.domains
 }
 
+output "urlshort_ipv4_addr" {
+  value = module.urlshort.ipv4_addr
+}
+
+output "urlshort_domain" {
+  value = module.urlshort.domain
+}
+
