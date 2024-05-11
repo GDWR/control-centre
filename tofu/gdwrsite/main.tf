@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = "rg-gdwrsite"
+  tags = {
+    Url = "https://gdwr.me"
+  }
 }
 
 resource "azurerm_container_group" "container" {
