@@ -8,7 +8,7 @@ variable "cloudflare_zone_id" {
   description = "Zone ID for Cloudflare."
 }
 
-variable "resource_group_location" {
+variable "azure_location" {
   type        = string
   description = "Location for all resources."
 }
