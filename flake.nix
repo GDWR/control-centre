@@ -9,10 +9,10 @@
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
         packages = with pkgs; [
-	  azure-cli
-	  just
+          azure-cli
+          just
           opentofu
-	];
+        ];
       };
     });
   };
