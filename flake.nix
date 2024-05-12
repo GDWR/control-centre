@@ -10,6 +10,7 @@
       default = pkgs.mkShell {
         packages = with pkgs; [
 	  azure-cli
+	  just
           opentofu
 	];
       };
