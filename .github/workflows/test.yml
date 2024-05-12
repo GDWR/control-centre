@@ -41,7 +41,7 @@ jobs:
           TF_VAR_azure_location: ${{ vars.AZ_LOCATION }}
         run: |
           nix develop --command just test-ci 
-          echo "failed=1" >> "$GITHUB_OUTPUT"
+          echo "failed=$(grep -c false results.json)" >> "$GITHUB_OUTPUT"
           echo "results=$(cat results.json)" >> "$GITHUB_OUTPUT"
 
       - uses: buildingcash/json-to-markdown-table-action@v1
