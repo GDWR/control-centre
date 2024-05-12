@@ -1,7 +1,15 @@
-# GDWR Infra
+Control Centre
+==============
+[![Services Health Check](https://github.com/GDWR/control-centre/actions/workflows/test.yml/badge.svg?branch=main&event=schedule)](https://github.com/GDWR/control-centre/actions/workflows/test.yml)
 
-Infrastructure deployed to Azure and Cloudflare via OpenTofu. With some post-deployment testing via Python.
 
+Command Contre for all deployments.
+
+This uses Azure and Cloudflare via OpenTofu with some post-deployment testing via Python.
+
+
+Quick Start
+-----------
 1. Login with Azure CLI
 ```bash
 az login
@@ -9,7 +17,9 @@ az login
 2. Grab your Cloudflare Token and stick it in a `.env`, use `.env.sample` as template.
 3. Run `just`, this will apply (with approval) and then test the deployment.
 
----
+
+Commands
+--------
 Available commands, can be seen with `just -l`.
 ```yaml
 Available recipes:
