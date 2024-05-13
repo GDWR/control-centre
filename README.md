@@ -3,7 +3,7 @@ Control Centre
 [![Services Health Check](https://github.com/GDWR/control-centre/actions/workflows/test.yml/badge.svg?branch=main&event=schedule)](https://github.com/GDWR/control-centre/actions/workflows/test.yml)
 
 
-Command Contre for all deployments.
+Control Centre for all deployments.
 
 This uses Azure and Cloudflare via OpenTofu with some post-deployment testing via Python.
 
