@@ -5,34 +5,8 @@ let
   kubeMasterAPIServerPort = 6443;
 in
 {
-
-  users.groups.admin = {};
-  users.users = {
-    admin = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ];
-      password = "admin";
-      group = "admin";
-    };
-  };
-
-
-  virtualisation.vmVariant = {
-    # following configuration is added only when building VM with build-vm
-    virtualisation = {
-      memorySize = 4096; 
-      diskSize = 8192;
-      cores = 2;
-      graphics = false;
-      forwardPorts = [ 
-        { from = "host"; host.port = 2222; guest.port = 22; }
-      ];
-      qemu.networkingOptions = [
-	"-net nic,id=eth1,model=e1000"
-	"-net socket,listen=localhost:8765"
-      ];
-    };
-  };
+  # Configuration for when using in VM
+  imports = [ ./vm.nix ];
 
   services.openssh = {
     enable = true;
