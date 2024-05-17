@@ -6,8 +6,8 @@ in {
     users.users.gdwr = {
       isNormalUser = true;
       extraGroups = [ "wheel" ];
-      password = "gdwr";
       group = "admin";
+      password = "gdwr";
       openssh.authorizedKeys.keys = [ publicKey ];
     };
   };

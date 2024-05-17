@@ -1,12 +1,14 @@
-{ config, lib, pkgs, ... }: 
+{ config, lib, pkgs, modulesPath, ... }:
 let
   kubeMasterIP = "172.16.1.1";
   kubeMasterHostname = "api.kube";
   kubeMasterAPIServerPort = 6443;
 in
 {
-  # Configuration for when using in VM
-  imports = [ ./vm.nix ];
+  imports = [
+    ./vm.nix # Configuration for when using in VM
+    "${modulesPath}/virtualisation/amazon-image.nix"
+  ];
 
   services.openssh = {
     enable = true;
