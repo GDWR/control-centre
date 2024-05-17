@@ -1,6 +1,5 @@
 { config, ... }: {
   imports = [
-    ./admin.nix
     ./gdwr.nix
   ];
 
