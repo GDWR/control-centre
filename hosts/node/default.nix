@@ -17,7 +17,7 @@ in
   networking.hostName = "node";
   networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
   networking.firewall.enable = false;
-  networking.interfaces.eth1 = {
+  networking.interfaces.eth0 = {
     ipv4.addresses = [{
       address = "172.16.1.2";
       prefixLength = 24;

@@ -9,10 +9,9 @@
         forwardPorts = [
           { from = "host"; host.port = 2222; guest.port = 22; }
 	  { from = "host"; host.port = 6443; guest.port = 6443; }
-	  { from = "host"; host.port = 8000; guest.port = 8000; }
         ];
         qemu.networkingOptions = [
-          "-net nic,id=eth1,model=e1000"
+          "-net nic,id=eth0,model=e1000"
           "-net socket,listen=localhost:8765"
         ];
       };

@@ -8,7 +8,7 @@
         cores = 2;
         graphics = false;
         qemu.networkingOptions = [
-          "-net nic,id=eth1,model=e1000"
+          "-net nic,id=eth0,model=e1000"
           "-net socket,connect=localhost:8765"
         ];
       };
